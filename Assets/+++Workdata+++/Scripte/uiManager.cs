@@ -10,6 +10,7 @@ public class uiManager : MonoBehaviour
     [SerializeField] private Button quitButton;
     
     [SerializeField] private TextMeshProUGUI textEggCounter;
+    [SerializeField] private TextMeshProUGUI textMeatCounter;
     [SerializeField] private GameObject losePanel;
     [SerializeField] private Button buttonTryAgain;
     
@@ -46,6 +47,11 @@ public class uiManager : MonoBehaviour
     public void UpdateEggText(int newEggCount)
     {
         textEggCounter.text = newEggCount.ToString();
+    }
+
+    public void UpdateMeatText(int newMeatCount)
+    {
+        textMeatCounter.text = newMeatCount.ToString();
     }
 
     public void LosePanel()

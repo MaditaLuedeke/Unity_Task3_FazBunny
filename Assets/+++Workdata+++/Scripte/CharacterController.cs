@@ -30,8 +30,6 @@ public class CharacterController : MonoBehaviour
     {
         if (canMove)
         {
-            Debug.Log(rb.linearVelocity);
-
             direction = 0;
 
             if (Keyboard.current.aKey.isPressed)
@@ -71,6 +69,11 @@ public class CharacterController : MonoBehaviour
             Debug.Log("It was an egg");
             Destroy(other.gameObject);
             EggManager.EggCollected();
+        } else if (other.CompareTag("Meat"))
+        {
+            Debug.Log("It was a meat");
+            Destroy(other.gameObject);
+            speed++;
         }
         else if (other.CompareTag("Enemy"))
         {
