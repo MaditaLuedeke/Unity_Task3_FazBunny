@@ -234,8 +234,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 488345105}
   - {fileID: 1719139115}
+  - {fileID: 488345105}
   m_Father: {fileID: 527753351}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1022,7 +1022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &527753348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,7 +1125,7 @@ MonoBehaviour:
   mainMenu: {fileID: 1852601467}
   quitButton: {fileID: 1787584448}
   textEggCounter: {fileID: 750765107}
-  textMeatCounter: {fileID: 0}
+  textMeatCounter: {fileID: 488345106}
   losePanel: {fileID: 1359869021}
   buttonTryAgain: {fileID: 478102983}
   winPanel: {fileID: 1592828727}
@@ -2596,7 +2596,7 @@ Transform:
   m_GameObject: {fileID: 898336135}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2299743, y: 1.0651782, z: -0.04190956}
+  m_LocalPosition: {x: -4.21, y: 0.72, z: -0.04190956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2768,6 +2768,7 @@ GameObject:
   - component: {fileID: 1134614555}
   - component: {fileID: 1134614556}
   - component: {fileID: 1134614557}
+  - component: {fileID: 1134614558}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -2918,6 +2919,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1134614558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134614553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524941b46580bb342a965a84e02f83e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  leftBoundary: -2
+  rightBoundary: 2
 --- !u!1 &1352373128
 GameObject:
   m_ObjectHideFlags: 0
@@ -3071,7 +3087,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1359869022
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3283,7 +3299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1592828728
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3703,7 +3719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1852601468
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3862,7 +3878,7 @@ Transform:
   m_GameObject: {fileID: 2086031127}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.12, y: 0.72, z: -0.04190956}
+  m_LocalPosition: {x: 1.19, y: -1.24, z: -0.04190956}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
