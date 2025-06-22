@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class uiManager : MonoBehaviour
 {
+    [SerializeField] private CountdownTimer countdownTimer;
+    
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private Button quitButton;
     
@@ -27,11 +29,14 @@ public class uiManager : MonoBehaviour
         
         winPanel.SetActive(false);
         playAgainButton.onClick.AddListener(ReloadLevel);
+        
+        countdownTimer.StopTimer();
     }
 
     public void OpenLevel()
     {
         mainMenu.SetActive(false);
+        countdownTimer.StartTimer();
     }
 
     public void QuitGame()
@@ -57,11 +62,13 @@ public class uiManager : MonoBehaviour
     public void LosePanel()
     {
         losePanel.SetActive(true);
+        countdownTimer.StopTimer();
     }
 
     public void WinPanel()
     {
         winPanel.SetActive(true);
+        countdownTimer.StopTimer();
     }
 
     void ReloadLevel()

@@ -20,7 +20,10 @@ public class EggManager : MonoBehaviour
     {
         counterEggs++;
         uiManager.UpdateEggText(counterEggs);
-        
+    }
+    
+    public void MeatCollected()
+    {
         counterMeat++;
         uiManager.UpdateMeatText(counterMeat);
     }

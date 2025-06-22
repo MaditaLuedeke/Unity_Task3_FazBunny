@@ -16,8 +16,8 @@ public class CharacterController : MonoBehaviour
     [Header("GroundCheck")] 
     [SerializeField] private Transform transformGroundCheck;
     [SerializeField] private LayerMask layerGround;
-    
-    bool canMove = true;
+
+    public bool canMove = true;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -74,10 +74,16 @@ public class CharacterController : MonoBehaviour
             Debug.Log("It was a meat");
             Destroy(other.gameObject);
             speed++;
+            EggManager.MeatCollected();
         }
         else if (other.CompareTag("Enemy"))
         {
             Debug.Log("It was an Enemy");
+            uiManager.LosePanel();
+            canMove = false;
+        }else if (other.CompareTag("Lava"))
+        {
+            Debug.Log("It was a Lavapit");
             uiManager.LosePanel();
             canMove = false;
         }
