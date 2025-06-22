@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FloatingTile_03_0: -5838709750914509674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

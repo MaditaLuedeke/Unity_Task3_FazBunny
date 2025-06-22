@@ -210,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FloatingTile_02_0: 1412221889532489368
+      FloatingTile_02_1: -3175584017417323710
+      FloatingTile_02_2: -2429581759439406497
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
