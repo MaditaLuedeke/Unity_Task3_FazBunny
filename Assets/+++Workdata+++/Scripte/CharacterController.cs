@@ -16,6 +16,8 @@ public class CharacterController : MonoBehaviour
     [Header("GroundCheck")] 
     [SerializeField] private Transform transformGroundCheck;
     [SerializeField] private LayerMask layerGround;
+    
+    private SpriteRenderer spriteRenderer;
 
     public bool canMove = true;
     
@@ -23,6 +25,8 @@ public class CharacterController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -48,6 +52,15 @@ public class CharacterController : MonoBehaviour
             }
 
             rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
+            
+            //Rotation
+            if (Keyboard.current.aKey.isPressed)
+            {
+                spriteRenderer.flipX = true;
+            } else if (Keyboard.current.dKey.isPressed)
+            {
+                spriteRenderer.flipX = false;
+            }
         }
     }
 
@@ -91,7 +104,7 @@ public class CharacterController : MonoBehaviour
         if (other.CompareTag("Nest"))
         {
             Debug.Log("It was a nest");
-            if (EggManager.counterEggs >= 5)
+            if (EggManager.counterEggs >= 4)
             {
                 uiManager.WinPanel();
                 canMove = false;
